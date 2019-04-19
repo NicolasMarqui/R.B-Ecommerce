@@ -1,0 +1,166 @@
+/* Pre Defined  */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Global Classes */
+.col-in-block {
+  float: none;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.tbl {
+  display: table;
+}
+
+.tbt-cell {
+  display: table-cell;
+}
+
+/* Main Styles */
+.mainContainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mainContainer header {
+  z-index: 25;
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .mainContainer header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+  }
+}
+
+.mainContainer header .top .logoNav h1 {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mainContainer header .top .logoNav {
+    padding: 20px;
+  }
+}
+
+.mainContainer header .top .menuMobile i {
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.mainContainer header .top .navItems ul {
+  white-space: nowrap;
+  font-size: 0px;
+  margin: 0;
+}
+
+.mainContainer header .top .navItems ul li {
+  display: inline-block;
+  padding: 14px 16px;
+  position: relative;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+.mainContainer header .top .navItems ul li a {
+  display: block;
+  font-size: 14px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.mainContainer header .top .navItems ul li a:hover::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  border: 2px solid #BD4A47;
+  width: 100%;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mainContainer header .bottom {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+
+.mainContainer header .bottom ul {
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.mainContainer header .bottom ul li {
+  display: inline-block;
+  padding: 15px 35px;
+}
+
+.mainContainer header .bottom ul li:hover {
+  background-color: #BD4A47;
+}
+
+.mainContainer header .bottom ul li:hover .vestuarioDrop {
+  visibility: visible;
+}
+
+.mainContainer header .bottom ul li a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  display: block;
+}
+
+.mainContainer header .bottom ul li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d7";
+  font-weight: 900;
+  padding: 0 5px 0 0;
+}
+
+.mainContainer header .bottom .vestuarioDrop {
+  position: absolute;
+  top: 100%;
+  background-color: #BD4A47;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.mainContainer .hero {
+  width: 100%;
+  position: relative;
+  background: url("https://images.pexels.com/photos/2087185/pexels-photo-2087185.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.png") no-repeat center/cover;
+  height: 80vh;
+}
+/*# sourceMappingURL=style.css.map */
