@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^home?$ index.php
+RewriteRule ^produtos?$ produtos.php
+RewriteRule ^login?$ login.php
+RewriteRule ^minhaConta?$ minhaConta.php

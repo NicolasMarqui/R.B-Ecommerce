@@ -1,13 +1,3 @@
 <div class="hero">
-    <div class="slider">
-        <div class="slide current">
-
-        </div>
-        <div class="slide">
-
-        </div>
-        <div class="slide">
-
-        </div>
-    </div>
+    <h1><span>R</span> <span>B</span> <br> <span>Store.</span></h1>
 </div>
