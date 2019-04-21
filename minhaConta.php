@@ -60,7 +60,7 @@
                                 <i class="fas fa-comments"></i>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-md-10 minhaContaMain">
+                        <div class="col-xs-12 col-md-10 minhaContaMain">
                             <a href="functions/logout.php"><i class="fas fa-sign-out-alt fa-2x"></i></a>
                             <h1>Seja bem vindo <br> <span><?php  echo utf8_encode($row['nomeCompleto'])?></span> </h1>
                             <div class="container">
@@ -82,11 +82,11 @@
                                             <h4>Endereço: <span><?php echo $row['endereco'] ?></span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <?php 
                                             if($row['isAdmin'] == 1): 
                                         ?>
-                                        <div class="isAdmin text-right">
+                                        <div class="isAdmin text-center">
                                             <button><a href="editar?acao=adicionar">Adicionar Produtos</a></button><br>
                                             <button><a href="editar?acao=editar">Editar Produtos</a></button><br>
                                             <button><a href="editar?acao=excluir">Excluir Produtos</a></button><br>

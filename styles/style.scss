@@ -56,20 +56,75 @@ body{
         transition: 0.5s ease-in-out;
         position: relative;
         
-        // @media(max-width: 768px){
-        //     &{
-        //         position: fixed;
-        //         top: 0;
-        //         left: 0;
-        //         right: 0;
-        //         height: 80px;
-        //     }
-        // }
+        @media(max-width: 768px){
+            &{
+                height: 80px;
+            }
+        }
 
         .top{
 
             position: relative;
             transition: 0.8s ease-in-out;
+
+            .fullNavMobile{
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 0;
+                background-color:rgba($color:  #333, $alpha: 0.98);
+                z-index: 101;
+                border: none;
+                transition: width 0.9s ease;
+
+                i{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    color: #fff;
+                }
+
+                .centerNav{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #fff;
+                    text-align: center;
+
+                    ul{
+                        white-space: nowrap;
+                        list-style-type: none;
+                        font-size: 0px;
+
+                        li{
+                            position: relative;
+                            padding: 14px 16px;
+
+                            a{
+                                font-size: 24px;
+                                display: block;
+                                color: #fff;
+                                position: relative;
+                                text-decoration: none;
+                            }
+
+                        }
+
+                        .catMobile{
+                            a::before{
+                                font-family: "Font Awesome 5 Free";
+                                content: "\f0d7";
+                                font-weight: 900;
+                                padding: 0 5px 0 0;
+                            }
+                            
+                            
+                        }
+                    }
+                }
+            }
 
             .logoNav{
 
@@ -249,9 +304,25 @@ body{
     .hero{
         width: 100%;
         position: relative;
-        background: url('https://images.pexels.com/photos/2087185/pexels-photo-2087185.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.png') no-repeat center/cover;
+        background: url('https://images.pexels.com/photos/2157086/pexels-photo-2157086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg') no-repeat center/cover;
         background-attachment: fixed;
         height: 80vh;
+
+        .overlay-hero{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba($color: #000, $alpha: 0.5);
+        }
+
+        h1{
+            height: 100%;
+            padding: 25px;
+            font-size: 75px;
+            color: #fff;
+        }
 
         
     }
@@ -599,6 +670,7 @@ body{
                     outline: none;
                     padding: 14px;
                     margin: 10px;
+                    width: 100%;
 
                     a{
                         color: white;

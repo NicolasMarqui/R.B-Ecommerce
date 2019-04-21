@@ -57,10 +57,72 @@ body {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .mainContainer header {
+    height: 80px;
+  }
+}
+
 .mainContainer header .top {
   position: relative;
   -webkit-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
+}
+
+.mainContainer header .top .fullNavMobile {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  background-color: rgba(51, 51, 51, 0.98);
+  z-index: 101;
+  border: none;
+  -webkit-transition: width 0.9s ease;
+  transition: width 0.9s ease;
+}
+
+.mainContainer header .top .fullNavMobile i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
+
+.mainContainer header .top .fullNavMobile .centerNav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.mainContainer header .top .fullNavMobile .centerNav ul {
+  white-space: nowrap;
+  list-style-type: none;
+  font-size: 0px;
+}
+
+.mainContainer header .top .fullNavMobile .centerNav ul li {
+  position: relative;
+  padding: 14px 16px;
+}
+
+.mainContainer header .top .fullNavMobile .centerNav ul li a {
+  font-size: 24px;
+  display: block;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+.mainContainer header .top .fullNavMobile .centerNav ul .catMobile a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d7";
+  font-weight: 900;
+  padding: 0 5px 0 0;
 }
 
 .mainContainer header .top .logoNav h1 {
@@ -224,9 +286,25 @@ body {
 .mainContainer .hero {
   width: 100%;
   position: relative;
-  background: url("https://images.pexels.com/photos/2087185/pexels-photo-2087185.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.png") no-repeat center/cover;
+  background: url("https://images.pexels.com/photos/2157086/pexels-photo-2157086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg") no-repeat center/cover;
   background-attachment: fixed;
   height: 80vh;
+}
+
+.mainContainer .hero .overlay-hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mainContainer .hero h1 {
+  height: 100%;
+  padding: 25px;
+  font-size: 75px;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -557,6 +635,7 @@ body {
   outline: none;
   padding: 14px;
   margin: 10px;
+  width: 100%;
 }
 
 .mainContainer .section-5 .minhaContaMain .isAdmin button a {
