@@ -50,18 +50,17 @@ body {
 }
 
 .mainContainer header {
-  z-index: 25;
+  z-index: 100;
   background-color: #ffffff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  .mainContainer header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-  }
+.mainContainer header .top {
+  position: relative;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 
 .mainContainer header .top .logoNav h1 {
@@ -518,6 +517,11 @@ body {
 
 .mainContainer .section-5 .minhaContaMain {
   position: relative;
+  color: #ffff;
+}
+
+.mainContainer .section-5 .minhaContaMain .container {
+  max-width: 100% !important;
 }
 
 .mainContainer .section-5 .minhaContaMain i {
@@ -532,7 +536,83 @@ body {
   text-align: center;
   padding: 15px;
   margin: 15px;
-  background-color: #406C99;
+  background-color: #5168E3;
   color: #ffffff;
+}
+
+.mainContainer .section-5 .minhaContaMain h4 {
+  color: #ffffff;
+  padding: 5px;
+  max-width: 100%;
+}
+
+.mainContainer .section-5 .minhaContaMain .isAdmin {
+  width: 100%;
+  display: block;
+}
+
+.mainContainer .section-5 .minhaContaMain .isAdmin button {
+  background-color: black;
+  border: none;
+  outline: none;
+  padding: 14px;
+  margin: 10px;
+}
+
+.mainContainer .section-5 .minhaContaMain .isAdmin button a {
+  color: white;
+  text-decoration: none;
+}
+
+.mainContainer .section-5 .minhaContaMain .isAdmin button:hover {
+  background-color: #BD4A47;
+  color: #fff;
+}
+
+.mainContainer .addWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.mainContainer .addWrapper .formAddWrapper {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mainContainer .addWrapper .formAddWrapper form input {
+  padding: 14px 16px;
+  width: 100%;
+}
+
+.mainContainer .addWrapper .formAddWrapper form button {
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  width: 55%;
+  background-color: green;
+  color: #fff;
+}
+
+.mainContainer .showProds {
+  border: 2px solid red;
+  padding: 14px 16px;
+  margin: 5px;
+  text-align: center;
+}
+
+.mainContainer .showProds .eachProd {
+  border: 2px solid blue;
+  margin: 20px 0px;
+  min-height: 300px;
+}
+
+.mainContainer .showProds .eachProd img {
+  padding: 14px;
 }
 /*# sourceMappingURL=style.css.map */

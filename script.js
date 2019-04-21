@@ -1,4 +1,19 @@
 $(document).ready(function(){
+
+    $(window).scroll(function(){
+        let top = $('.top');
+
+        if($(window).scrollTop() > 150){
+            top.css('position', 'fixed');
+            top.css('top', '0');
+            top.css('width', '100%');
+            top.css('background-color', '#fff');
+            
+
+        }else{
+            top.css('position', 'relative');
+        }
+    })
     
     function backHome(){
         let logo = $('#mainLogo');
@@ -21,15 +36,9 @@ $(document).ready(function(){
         $(this).css('opacity', '1');
     })
 
-    let colors = ["red", "blue", "orange"];
-    let initial = 0;
 
-    let hero = $('.hero');
+    
 
-    setInterval(() => {
-        hero.css('background-color', `colors[${initial}]`)
-        initial += 1 % colors.length;
-    },1200)
 
 
 })

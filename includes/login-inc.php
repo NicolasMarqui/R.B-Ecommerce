@@ -6,7 +6,7 @@
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $senha = mysqli_escape_string($conn, $_POST['senha']);
 
-    $query = "SELECT * FROM users WHERE email='$email' and senha='$senha'";
+    $query = "SELECT * FROM users WHERE email='$email' and senha= md5('$senha')";
 
     $results = mysqli_query($conn, $query);
 

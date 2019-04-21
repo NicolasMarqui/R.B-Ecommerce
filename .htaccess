@@ -3,3 +3,5 @@ RewriteRule ^home?$ index.php
 RewriteRule ^produtos?$ produtos.php
 RewriteRule ^login?$ login.php
 RewriteRule ^minhaConta?$ minhaConta.php
+RewriteRule ^editar?$ mudarProdutos.php
+RewriteRule ^info?$ info.php

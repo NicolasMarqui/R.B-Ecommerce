@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="mainContainer">
+    <div class="mainContainer" style="background-color: #3996FD;">
         <header>
             <?php include('pages/nav.php')?>
         </header>
@@ -38,7 +38,7 @@
             <div class="section section-5">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-3 col-md-2 menuMinhaConta">
+                        <div class="hidden-sm col-md-2 menuMinhaConta">
                             <h3>Informações</h3>
                             <ul>
                                 <li><a href="#">Seus dados</a></li>
@@ -60,14 +60,14 @@
                                 <i class="fas fa-comments"></i>
                             </div>
                         </div>
-                        <div class="col-xs-3 col-md-10 minhaContaMain">
+                        <div class="col-xs-9 col-md-10 minhaContaMain">
                             <a href="functions/logout.php"><i class="fas fa-sign-out-alt fa-2x"></i></a>
-                            <h1>Seja bem vindo <br> <span><?php  echo $row['nomeCompleto']?></span> </h1>
+                            <h1>Seja bem vindo <br> <span><?php  echo utf8_encode($row['nomeCompleto'])?></span> </h1>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-xs-12 col-md-6">
+                                    <div class="col-xs-10 col-md-6">
                                         <div class="itemInfo">
-                                            <h4>Nome: <span><?php echo $row['nomeCompleto'] ?></span></h4>
+                                            <h4>Nome: <span><?php echo utf8_encode($row['nomeCompleto']) ?></span></h4>
                                             <h4>Email: <span><?php echo $row['email'] ?></span></h4>
                                             <h4>senha: <a href="#">Mostrar senha</a></span></h4>
                                             <h4>Sexo: <span><?php 
@@ -82,8 +82,21 @@
                                             <h4>Endereço: <span><?php echo $row['endereco'] ?></span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        info2
+                                    <div class="col-xs-10 col-md-6">
+                                        <?php 
+                                            if($row['isAdmin'] == 1): 
+                                        ?>
+                                        <div class="isAdmin text-right">
+                                            <button><a href="editar?acao=adicionar">Adicionar Produtos</a></button><br>
+                                            <button><a href="editar?acao=editar">Editar Produtos</a></button><br>
+                                            <button><a href="editar?acao=excluir">Excluir Produtos</a></button><br>
+                                            <button><a href="editar?acao=ver">Ver Produtos</a></button><br>
+                                        </div>
+                                            <?php else: ?>
+                                            <div class="noNot">
+                                                <h5>Sem Notificações no momento</h5>
+                                            </div>
+                                            <?php endif;?>
                                     </div>
                                 </div>
                             </div>

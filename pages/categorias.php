@@ -7,7 +7,7 @@
                         <div class="vestuarioDrop">
                             <ul class="vestItems">
                                 <li><a href="#">Roupas</a></li>
-                                <li><a href="produtos?categoria=camisetas">Camisetas</a></li>
+                                <li><a href="produtos?categoria=3">Camisetas</a></li>
                                 <li><a href="#">Calças</a></li>
                                 <li><a href="#">Vestidos</a></li>
                                 <li><a href="#">Meias</a></li>
@@ -29,7 +29,7 @@
                         </div>
                     </li>
                     <li><a href="#">Feminino</a></li>
-                    <li><a href="#">Calçados</a></li>
+                    <li><a href="produtos?categoria=2">Calçados</a></li>
                     <li><a href="#">Social</a></li>
                 </ul>
             </div>

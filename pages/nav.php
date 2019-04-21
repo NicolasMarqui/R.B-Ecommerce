@@ -14,10 +14,10 @@
             <div class="hidden-xs col-sm-8 navItems col-in-block text-right">
                 <ul>
                     <li><a href="home">Home</a></li>
-                    <li><a href="produtos">Produtos</a></li>
+                    <li><a href="produtos?categoria=all">Produtos</a></li>
                     <li><a href=<?php
 
-                        if($_SESSION['isLogged']){
+                        if(isset($_SESSION['isLogged']) && $_SESSION['isLogged']){
                             echo 'minhaConta';
                         }else{
                             echo 'login';
@@ -26,7 +26,7 @@
                     ?>
                     ><?php
                     
-                        if($_SESSION['isLogged']){
+                        if(isset($_SESSION['isLogged']) && $_SESSION['isLogged']){
                             echo 'Minha Conta';
                         }else{
                             echo 'Login';
