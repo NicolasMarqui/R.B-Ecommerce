@@ -322,6 +322,7 @@ body{
             padding: 25px;
             font-size: 75px;
             color: #fff;
+
         }
 
         
@@ -512,7 +513,7 @@ body{
     }
 
     .section-4{
-
+        color: #000;
     }
 
     .formWrapper{
@@ -717,11 +718,154 @@ body{
         }
     }
 
+    .filtersAndCat{
+        width: 100%;
+        border: 2px solid green;
+        padding: 15px 0;
+        text-align: center;
+
+        .filtrosProd{
+
+            ul{
+                list-style-type: none;
+                white-space: nowrap;
+                font-size: 0;
+
+                li{
+                    display: inline-block;
+                    padding: 10px 16px;
+                    position: relative;
+
+                    @media(max-width: 768px){
+                        display: block;
+                    }
+
+                    &:hover .dropPreco{
+                        visibility: visible;
+                    }
+
+
+                    h5{
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: #000;
+                        position: relative;
+                        cursor: pointer;
+
+                        &::before{
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f0d7";
+                            font-weight: 900;
+                            padding: 0 10px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ordenarPor{
+
+            @media(max-width: 768px){
+                text-align: center;
+            }
+
+            ul{
+                list-style-type: none;
+                white-space: nowrap;
+                font-size: 0;
+
+                li{
+                    display: inline-block;
+                    padding: 10px 16px;
+                    position: relative;
+
+                    &:hover .ordernarDrop{
+                        visibility: visible;
+                    }
+
+                    h5{
+                        font-size: 14px;
+                        color: #000;
+                        position: relative;
+                        cursor: pointer;
+
+                        &::before{
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f0d7";
+                            font-weight: 900;
+                            padding: 0 10px 0 0;
+                        }
+                    }
+                }
+            }
+
+            .ordernarDrop{
+                position: absolute;
+                top: 100%;
+                background-color: #BD4A47;
+                left: -14px;
+                width: 180px;
+                z-index: 10;
+                text-align: center;
+                visibility: hidden;
+
+                ul{
+                    white-space: nowrap;
+
+                    li{
+                        display: block;
+                        position: relative;
+                        padding: 14px 16px;
+
+                        &:hover{
+                            background-color: #000;
+                        }
+
+                        a{
+                            font-size: 14px;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropPreco{
+            position: absolute;
+            top: 100%;
+            background-color: #BD4A47;
+            width: 200px;
+            left: -47px;
+            z-index: 10;
+            text-align: center;
+            visibility: hidden;
+
+            ul{
+                li{
+                    display: block;
+                    padding: 14px 16px;
+
+                    &:hover{
+                        background-color: #000;
+                    }
+
+                    a{
+                        color: #ffffff;
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
     .showProds{
         border: 2px solid red;
         padding: 14px 16px;
         margin: 5px;
         text-align: center;
+        min-height: 200vh;
 
         .eachProd{
             border: 2px solid blue;

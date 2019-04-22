@@ -1,13 +1,14 @@
 $(document).ready(function(){
 
     $(window).scroll(function(){
-        let top = $('.top');
+        let top = $('.bottom');
+        let filters = $('.filtersAndCat');
 
         if($(window).scrollTop() > 150){
             top.css('position', 'fixed');
             top.css('top', '0');
             top.css('width', '100%');
-            top.css('background-color', '#fff');
+            //top.css('background-color', '#fff');
 
         }else{
             top.css('position', 'relative');
